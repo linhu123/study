@@ -1,8 +1,26 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.linhu</groupId>
-  <artifactId>study</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.linhu</groupId>
+	<artifactId>study</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	  <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+	<plugins>
+		<!-- 编译的时候使用JDK8和UTF8编码 , -->
+		<plugin>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<!-- <version>3.0</version> -->
+			<configuration>
+				<source>1.8</source>
+				<target>1.8</target>
+				<encoding>UTF-8</encoding>
+			</configuration>
+		</plugin>
+	</plugins>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
 		<dependency>
@@ -20,15 +38,15 @@
 
 		<!-- https://mvnrepository.com/artifact/jpcap/jpcap -->
 		<dependency>
-		    <groupId>jpcap</groupId>
-		    <artifactId>jpcap</artifactId>
-		    <version>0.1.18-002</version>
+			<groupId>jpcap</groupId>
+			<artifactId>jpcap</artifactId>
+			<version>0.1.18-002</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.netflix.hystrix/hystrix-core -->
 		<dependency>
-		    <groupId>com.netflix.hystrix</groupId>
-		    <artifactId>hystrix-core</artifactId>
-		    <version>1.5.12</version>
+			<groupId>com.netflix.hystrix</groupId>
+			<artifactId>hystrix-core</artifactId>
+			<version>1.5.12</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
