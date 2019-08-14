@@ -8,6 +8,7 @@ import java.sql.Ref;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javax.xml.bind.SchemaOutputResolver;
 
@@ -40,6 +41,13 @@ public class StringMethod {
 		} catch (IOException e) {
 			System.out.println(String.format("{}文件没有找到",path));
 		}
+	}
+	
+	public static void rwFile2() {
+//		try(Stream<String> stream = Files.lines(Paths.get("res/nashorn1.js"))) {
+//		    stream.filter(line -> line.contains("print"))
+//		        .map(String::trim);
+//		        .forEach(System.out.println());
 	}
 	
 	public static void main(String[] args) {
