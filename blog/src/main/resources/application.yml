@@ -1,0 +1,27 @@
+
+#view映射
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+#关闭thymeleaf的缓存，不然在开发过程中修改页面不会立刻生效需要重启，生产可配置为true
+  thymeleaf:
+    cache: false
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/linfixblog?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>LINFIX's BLOG</title>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}"  media="all">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<div class="layui-container">
+    <div>
+        <!--导航栏-->
+        <ul class="layui-nav">
+            <li class="layui-nav-item"><a href="">LINFIX的学习BLOG</a></li>
+            <li class="layui-nav-item"><a href="">HOME</a></li>
+            <li class="layui-nav-item layui-this">
+                <a href="javascript:;">Spring</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">Spring</a></dd>
+                    <dd><a href="">Spring Boot</a></dd>
+                    <dd><a href="">Spring Cloud</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">JAVA</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">移动模块</a></dd>
+                    <dd><a href="">后台模版</a></dd>
+                    <dd class="layui-this"><a href="">选中项</a></dd>
+                    <dd><a href="">电商平台</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">Python</li>
+        </ul>
+    </div>
+    <!--常规布局（以中型屏幕桌面为例）：-->
+    <div class="layui-row">
+        <div class="layui-col-md9">
+            你的内容 9/12
+        </div>
+        <div class="layui-col-md3">
+            你的内容 3/12
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/layui/layui.all.js}"></script>
+<script>
+    //由于模块都一次性加载，因此不用执行 layui.use() 来加载对应模块，直接使用即可：
+    ;!function(){
+        var layer = layui.layer
+            ,form = layui.form;
+        layer.msg('Hello World');
+    }();
+</script>
+</body>
+</html>
