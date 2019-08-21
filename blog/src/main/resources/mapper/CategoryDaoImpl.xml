@@ -8,4 +8,10 @@
       VALUES (#{categoryName},#{categoryDes},#{categoryLevel},#{categoryParent}, 0);
     </insert>
 
+    <select id="selectAllCategory" resultType="com.linfix.pojo.Category">
+        SELECT * FROM
+          category
+        WHEN delete = 0
+    </select>
+
 </mapper>

@@ -5,6 +5,8 @@ import com.linfix.pojo.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CategoryService {
     @Autowired
@@ -19,5 +21,10 @@ public class CategoryService {
         int colum = categoryDao.addCategory(category);
         if(colum < 1)return false;
         return true;
+    }
+
+    public List<Category> selectAllCategory(){
+        List<Category> categories = categoryDao.selectAllCategory();
+        return categories;
     }
 }

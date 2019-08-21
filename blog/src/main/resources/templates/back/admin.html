@@ -18,22 +18,28 @@
     </ul>
     <div class="layui-tab-content">
         <div class="layui-tab-item layui-show">
-            <div id="category"></div>
-            <!--<iframe src="category.htmld" frameborder="0" width="300" scrolling="No" height="200" leftmargin="0"  topmargin="0"></iframe>-->
         </div>
-        <div class="layui-tab-item">内容2</div>
+        <div id="category" class="layui-tab-item">
+
+        </div>
         <div class="layui-tab-item">内容3</div>
         <div class="layui-tab-item">内容4</div>
         <div class="layui-tab-item">内容5</div>
     </div>
 </div>
 <script>
-    var baseUrl = "127.0.0.1:8888/category"
+    var baseUrl = "127.0.0.1:8888"
     $(document).ready(function () {
         htmlEle = $.ajax({url:baseUrl,async:false})
         
     })
-//$("#catefory").fun
+    $("#catefory").click(function () {
+        data = $.ajax(baseUrl+"/blog/addCategory")
+        for(i in data){
+
+        }
+        $("#catefory").append()
+    })
 </script>
 </body>
 </html>

@@ -3,6 +3,8 @@ package com.linfix.dao;
 import com.linfix.pojo.Category;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface CategoryDao {
     /**
@@ -18,4 +20,10 @@ public interface CategoryDao {
      * @return
      */
     int updateCategory(Category category);
+
+    /**
+     * 返回所有的category
+     * @return
+     */
+    List<Category> selectAllCategory();
 }
