@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LINFIXBLOG`S ADMIN SYSTEM</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <script src="/layui/layui.all.js"></script>
+    <script src="/js/jquery-1.9.0.min.js"></script>
+</head>
+<body>
+<div class="layui-tab" lay-filter="test">
+    <ul class="layui-tab-title">
+        <li class="layui-this" lay-id="11">网站设置</li>
+        <li lay-id="22">博客分类</li>
+        <li lay-id="33">博客管理</li>
+        <li lay-id="44">资源管理</li>
+        <li lay-id="55">关于我们</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <div id="category"></div>
+            <!--<iframe src="category.htmld" frameborder="0" width="300" scrolling="No" height="200" leftmargin="0"  topmargin="0"></iframe>-->
+        </div>
+        <div class="layui-tab-item">内容2</div>
+        <div class="layui-tab-item">内容3</div>
+        <div class="layui-tab-item">内容4</div>
+        <div class="layui-tab-item">内容5</div>
+    </div>
+</div>
+<script>
+    var baseUrl = "127.0.0.1:8888/category"
+    $(document).ready(function () {
+        htmlEle = $.ajax({url:baseUrl,async:false})
+        
+    })
+//$("#catefory").fun
+</script>
+</body>
+</html>

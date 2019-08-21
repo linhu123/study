@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.linfix.dao.CategoryDao">
+
+    <insert id="addCategory" parameterType="com.linfix.pojo.Category">
+      INSERT INTO `linfixblog`.`category`(`category_name`, `category_des`, `category_level`, `category_parent`, `delete`)
+      VALUES (#{categoryName},#{categoryDes},#{categoryLevel},#{categoryParent}, 0);
+    </insert>
+
+</mapper>

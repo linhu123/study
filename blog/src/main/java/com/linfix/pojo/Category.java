@@ -6,6 +6,7 @@ public class Category {
     private String categoryDes;
     private int categoryLevel;
     private int categoryParent;
+    private int delete;
 
     public Integer getCategoryId() {
         return categoryId;
