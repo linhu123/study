@@ -26,3 +26,4 @@ logging:
         mapper : debug
 server:
   port: 8888
+

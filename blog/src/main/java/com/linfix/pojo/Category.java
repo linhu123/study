@@ -6,7 +6,7 @@ public class Category {
     private String categoryDes;
     private int categoryLevel;
     private int categoryParent;
-    private int delete;
+    private int deleteFlag;
 
     public Integer getCategoryId() {
         return categoryId;
@@ -48,6 +48,14 @@ public class Category {
         this.categoryParent = categoryParent;
     }
 
+    public int getDeleteFlag() {
+        return deleteFlag;
+    }
+
+    public void setDeleteFlag(int deleteFlag) {
+        this.deleteFlag = deleteFlag;
+    }
+
     @Override
     public String toString() {
         return "Category{" +
@@ -56,6 +64,7 @@ public class Category {
                 ", categoryDes='" + categoryDes + '\'' +
                 ", categoryLevel=" + categoryLevel +
                 ", categoryParent=" + categoryParent +
+                ", deleteFlag=" + deleteFlag +
                 '}';
     }
 }

@@ -9,9 +9,17 @@
     </insert>
 
     <select id="selectAllCategory" resultType="com.linfix.pojo.Category">
-        SELECT * FROM
-          category
-        WHEN delete = 0
+        SELECT
+			c.category_id AS categoryId,
+			c.category_name AS categoryName,
+			c.category_des AS categoryDes,
+			c.category_level AS categoryLevel,
+			c.category_parent AS categoryParent,
+			c.delete_flag AS deleteFlag
+		FROM
+			category AS c
+		WHERE
+			delete_flag = 0
     </select>
 
 </mapper>

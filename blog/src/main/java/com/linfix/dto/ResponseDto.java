@@ -8,14 +8,38 @@ public class ResponseDto<T> {
     }
     private String code;//200 success
     private String message;
-    private T data;
+    private Object data;
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
 
     /**
      * 构建带数据的响应
      * @param data
      * @return
      */
-    public static<T> ResponseDto successWithData(T data){
+    public static ResponseDto successWithData(Object data){
         return new ResponseDto(RESPONSE.SUCCESS_CODE,RESPONSE.SUCCESS_MESSAGE,data);
     }
 
@@ -27,7 +51,7 @@ public class ResponseDto<T> {
     public static ResponseDto failWithMessage(String message){
         return new ResponseDto(RESPONSE.FAIL_CODE,message,null);
     }
-    public ResponseDto(String code, String message, T data) {
+    public ResponseDto(String code, String message, Object data) {
         this.code = code;
         this.message = message;
         this.data = data;

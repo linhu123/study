@@ -16,6 +16,8 @@ import java.util.List;
 public class BlogController {
     @Autowired
     private BlogService blogService;
+
+    @Autowired
     private CategoryService categoryService;
 
     @RequestMapping(value = "/editBlog")
@@ -32,7 +34,7 @@ public class BlogController {
 
     @RequestMapping(value = "/allCategory")
     @ResponseBody
-    public ResponseDto selectAll(){
+    public ResponseDto selectAllCategory(){
         List<Category> categories = categoryService.selectAllCategory();
         if (!categories.isEmpty()){
             return ResponseDto.successWithData(categories);
